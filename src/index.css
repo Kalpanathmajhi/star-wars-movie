@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Star Jedi";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Star Jedi"), local("StarJedi"),
+    url("./shared/assets/fonts/Starjedi.ttf") format("truetype");
+  display: swap;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+
+.select {
+  position: relative;
+  display: flex;
+  width: 27rem;
+  height: 4.5rem;
+  line-height: 3;
+  background: #5c6664;
+  overflow: hidden;
+  border-radius: 0.25em;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #2b2e2e;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+.select:hover::after {
+  color: #2098d1;
+}
+
+thead button {
+  border: 0;
+  border-radius: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  padding: 0.5em;
+  margin-bottom: 1px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.slide-left {
+  width: 100%;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+.slide-left > * {
+  animation: slide-left 10s;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
